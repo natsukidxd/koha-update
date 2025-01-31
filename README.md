@@ -1,6 +1,6 @@
 # UPDATE LATEST KOHA v24.05
 
-sudo mysql -uroot -p[password] mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql
+#sudo mysql -uroot -p[password] mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql
 
 sudo apt-get update
 sudo apt-get upgrade
