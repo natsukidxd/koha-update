@@ -1,8 +1,7 @@
 # UPDATE LATEST KOHA v24.05
 
--sudo mysql -uroot -p[password] mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql
-
--sudo apt-get update
+sudo mysql -uroot -p[password] mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql
+sudo apt-get update
 sudo apt-get upgrade
 sudo apt install sudo apt-transport-https ca-certificates curl
 sudo mkdir -p --mode=0755 /etc/apt/keyrings
