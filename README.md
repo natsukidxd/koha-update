@@ -28,6 +28,7 @@ sudo koha-passwd library </br>
 <install DBeaver> </br>
 USE mysql; </br>
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[password]'; </br>
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password'; </br>
 FLUSH PRIVILEGES; </br>
 EXIT; </br>
   </br>
