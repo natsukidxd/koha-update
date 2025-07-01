@@ -1,6 +1,6 @@
 # UPDATE LATEST KOHA v24.05
 
-sudo mysql -uroot -p[password] mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql </br>
+sudo mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql </br>
 sudo apt-get update </br>
 sudo apt-get upgrade </br>
 sudo apt install sudo apt-transport-https ca-certificates curl </br>
@@ -27,8 +27,8 @@ sudo koha-passwd library </br>
  </br>
 <install DBeaver> </br>
 USE mysql; </br>
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[password]'; </br>
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password'; </br>
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '[password]'; (for mysql db)</br>
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password'; for(mariadb)</br>
 FLUSH PRIVILEGES; </br>
 EXIT; </br>
   </br>
