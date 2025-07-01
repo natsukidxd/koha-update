@@ -1,7 +1,7 @@
 # UPDATE LATEST KOHA v24.05
 
-sudo mysqldump --single-transaction -uroot -p[password] koha_library > koha_library.sql </br>
-sudo apt-get update </br>
+(in old koha server) sudo mysqldump --single-transaction -uroot -p koha_library > koha_library.sql </br>
+(in new koha server) sudo apt-get update </br>
 sudo apt-get upgrade </br>
 sudo apt install sudo apt-transport-https ca-certificates curl </br>
 sudo mkdir -p --mode=0755 /etc/apt/keyrings </br>
@@ -32,11 +32,11 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'your_new_password'; for(mariadb)</b
 FLUSH PRIVILEGES; </br>
 EXIT; </br>
   </br>
-sudo mysql -uroot -p[password] </br>
+sudo mysql -uroot -p </br>
 drop database koha_library; </br>
 create database koha_library; </br>
 quit; </br>
-sudo mysql -uroot -p[password] koha_library < koha_library.sql  </br>
+sudo mysql -uroot -p koha_library < koha_library.sql  </br>
 sudo service memcached restart </br>
 sudo koha-upgrade-schema library </br>
 sudo koha-rebuild-zebra -v -f library </br>
