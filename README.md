@@ -37,6 +37,7 @@ drop database koha_library; </br>
 create database koha_library; </br>
 quit; </br>
 sudo mysql -uroot -p koha_library < koha_library.sql  </br>
+sed -i 's/utf8mb4_0900_ai_ci/utf8mb4_unicode_ci/g' [sql location]</br>
 sudo service memcached restart </br>
 sudo koha-upgrade-schema library </br>
 sudo koha-rebuild-zebra -v -f library </br>
